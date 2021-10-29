@@ -1,14 +1,16 @@
 # flutter_with_clean_architecture
 
 
-Clean Architecture
+### Clean Architecture
 
+```
 3 Layers
 
 Presentation
   Widgets
   Presentation logic holders
     -> BLoC, ChnageNotifier
+    
 Domain
   Use cases
     -> Business logic of particular usecase
@@ -16,6 +18,7 @@ Domain
   Entities
   Repositories
     -> On the edge between data and domain layers.
+    
 Data
   -> Define how data will be gotten and managed
   Repositories
@@ -24,3 +27,4 @@ Data
     -> API
   Local data sources
     -> DB, shared preference
+```
