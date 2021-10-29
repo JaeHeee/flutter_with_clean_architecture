@@ -11,19 +11,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get_it: ^2.0.1
-  flutter_bloc: ^0.21.0
-  equatable: ^0.4.0
-  dartz: ^0.8.6
-  connectivity: ^0.4.3+7
-  http: ^0.12.0+2
-  shared_preferences: ^0.5.3+4
+  get_it: ^7.2.0
+  flutter_bloc: ^7.3.1
+  equatable: ^2.0.3
+  dartz: ^0.10.0
+  connectivity: ^3.0.6
+  http: ^0.13.4
+  shared_preferences: ^2.0.8
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mockito:
+  mockito: ^5.0.16
+  build_runner: ^2.1.4
   flutter_lints: ^1.0.0
 
 flutter:
