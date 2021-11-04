@@ -86,6 +86,4 @@ class MockSharedPreferences extends _i1.Mock implements _i2.SharedPreferences {
       (super.noSuchMethod(Invocation.method(#reload, []),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future<void>.value()) as _i3.Future<void>);
-  @override
-  String toString() => super.toString();
 }
