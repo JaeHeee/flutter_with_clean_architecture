@@ -36,6 +36,4 @@ class MockNumberTriviaRepository extends _i1.Mock
       getConcreteNumberTrivia(int? number) => (super.noSuchMethod(
               Invocation.method(#getConcreteNumberTrivia, [number]))
           as _i3.Future<_i4.Either<_i5.Failure, _i6.NumberTrivia>>?);
-  @override
-  String toString() => super.toString();
 }

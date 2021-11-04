@@ -4,7 +4,7 @@
 
 import 'dart:async' as _i4;
 
-import 'package:flutter_with_clean_architecture/core/platform/network_info.dart'
+import 'package:flutter_with_clean_architecture/core/network/network_info.dart'
     as _i6;
 import 'package:flutter_with_clean_architecture/features/number_trivia/data/datasources/number_trivia_local_data_source.dart'
     as _i5;
@@ -45,8 +45,6 @@ class MockNumberTriviaRemoteDataSource extends _i1.Mock
               returnValue: Future<_i2.NumberTriviaModel>.value(
                   _FakeNumberTriviaModel_0()))
           as _i4.Future<_i2.NumberTriviaModel>);
-  @override
-  String toString() => super.toString();
 }
 
 /// A class which mocks [NumberTriviaLocalDataSource].
@@ -64,8 +62,6 @@ class MockNumberTriviaLocalDataSource extends _i1.Mock
               Invocation.method(#cacheNumberTrivia, [triviaToCache]),
               returnValueForMissingStub: Future<void>.value())
           as _i4.Future<void>?);
-  @override
-  String toString() => super.toString();
 }
 
 /// A class which mocks [NetworkInfo].
@@ -80,6 +76,4 @@ class MockNetworkInfo extends _i1.Mock implements _i6.NetworkInfo {
   _i4.Future<bool> get isConnected =>
       (super.noSuchMethod(Invocation.getter(#isConnected),
           returnValue: Future<bool>.value(false)) as _i4.Future<bool>);
-  @override
-  String toString() => super.toString();
 }
