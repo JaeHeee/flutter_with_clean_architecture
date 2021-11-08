@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../../core/error/failures.dart';
+import '../../../../core/usecases/usecase.dart';
 import '../../../../core/util/input_converter.dart';
 import '../../domain/entities/number_trivia.dart';
 import '../../domain/usecases/get_concrete_number_trivia.dart';
@@ -48,6 +49,14 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
             },
           );
         },
+      );
+    });
+    on<GetTriviaForRandomNumber>((event, emit) async {
+      emit(Loading());
+      final failureOrTrivia = await getRandomNumberTrivia(NoParams());
+      failureOrTrivia!.fold(
+        (failure) => emit(Error(message: _mapFailureToMessage(failure))),
+        (trivia) => emit(Loaded(trivia: trivia)),
       );
     });
   }
