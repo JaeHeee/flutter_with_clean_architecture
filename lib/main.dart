@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() {
+import 'features/number_trivia/presnetation/pages/number_trivia_page.dart';
+import 'injection_container.dart' as di;
+
+void main() async {
+  await di.init();
   runApp(const MyApp());
 }
 
@@ -12,9 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter With Clean Architecture',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: Container(),
+      home: const NumberTriviaPage(),
     );
   }
 }
